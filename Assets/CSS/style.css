@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Fredoka:wght@300..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+    font-family: "Agdasima", sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+nav
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 1rem;
+    position: sticky;
+    z-index: 20;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    color: #2f2f2fee;
+}
+
+hr
+{
+    border: 1px solid #e6e6e6f9;
+}
+
+.web-title{
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.web-title a
+{
+    color: black;
+}
+
+.nav-buttons ul
+{
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.nav-buttons ul > li
+{
+    list-style: none;
+    margin-right: 3rem;
+    cursor: pointer;
+}
+
+.nav-buttons ul > li:hover{
+    text-decoration: underline;
+    text-underline-offset: 0.6rem;
+}
+
+
+
+.image-container img
+{
+    width: 60%;
+}
