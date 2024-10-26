@@ -1,68 +1,172 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Fredoka:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-*{
+:root {
+    /* Colors */
+    --orange: hsl(22, 85%, 55%);
+    --Bright-orange: hsl(0, 86%, 43%);
+    --Red: hsl(0, 100%, 50%);
+    --redish-white: hsl(0, 33%, 98%);
+    --brown-white: hsl(26, 33%, 92%);
+    --white: hsl(0, 0%, 100%);
+    --Black: hsl(0, 0%, 0%);
+    --Grayish-blue: hsl(0, 0%, 52%);
+    --Light-black: hsl(0, 0%, 0%, 75%);
+
+    /* Font-Sizes */
+    --nav-font-size: 0.6rem
+}
+
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #FFFFFF;
-    font-family: "Agdasima", sans-serif;
+    font-family: "Inter", sans-serif;
+    background-color: var(--bg-color1);
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-nav
-{
+
+nav {
     display: flex;
     align-items: center;
     justify-content: space-around;
     margin: 1rem;
     position: sticky;
     z-index: 20;
-    font-weight: 700;
     margin-bottom: 1.2rem;
-    color: #2f2f2fee;
 }
 
-hr
-{
-    border: 1px solid #e6e6e6f9;
-}
 
-.web-title{
+.web-title {
     font-size: 1.6rem;
-    font-weight: 700;
+    font-weight: 600;
 }
 
-.web-title a
-{
-    color: black;
+.web-title a {
+    color: rgb(0, 0, 0);
 }
 
-.nav-buttons ul
-{
+
+.nav-buttons ul {
     display: flex;
     align-items: center;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
-.nav-buttons ul > li
-{
+.nav-buttons ul>li {
     list-style: none;
-    margin-right: 3rem;
+    margin-right: 2.5rem;
     cursor: pointer;
+    color: var(--Black);
+
 }
 
-.nav-buttons ul > li:hover{
+.nav-buttons ul>li:hover {
     text-decoration: underline;
     text-underline-offset: 0.6rem;
+    color: var(--Bright-orange);
+    font-weight: 600;
 }
 
 
 
-.image-container img
-{
-    width: 60%;
+.hero-section {
+    min-width: 100vh;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+.hero-title {
+    text-align: left;
+    margin: 0 12rem 0 13rem;
+    color: var(--Bright-orange);
+    font-size: 4rem;
+    font-weight: 500;
+    width: 600px;
+
+}
+
+.hero-paragraph {
+    color: var(--Grayish-blue);
+    font-size: 1.2rem;
+    margin-top: 1.8rem;
+    line-height: 2rem;
+    text-align: justify;
+}
+
+.become-donor-btn {
+    font-size: 1rem;
+    padding: 0.8rem;
+    font-weight: 400;
+    color: var(--white);
+    border-radius: 5px;
+    background-color: var(--Bright-orange);
+}
+
+.become-donor-btn:hover {
+    font-weight: 700;
+}
+
+.blood-donation-info {
+    width: 400px;
+    aspect-ratio: 1;
+    position: relative;
+    right: 5rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.blood-donation-info::before {
+    content: "";
+    display: block;
+    background: linear-gradient(90deg,
+            hsla(197, 100%, 64%, 1) 0%,
+            hsla(339, 100%, 55%, 1) 100%);
+    height: 400px;
+    width: 400px;
+    position: absolute;
+    animation: rotate 8s linear infinite;
+    z-index: 0;
+    overflow: hidden;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.blood-donation-info h1 {
+    margin-bottom: 2rem;
+    color: var(--Bright-orange);
+}
+
+.blood-donation-info li {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.blood-donation-info li span {
+    color: var(--Bright-orange);
+    font-weight: 600;
+}
+
+.blood-donation-info li::marker {
+    color: var(--Bright-orange);
+    font-size: 1.2rem;
 }
