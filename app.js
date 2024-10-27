@@ -3,7 +3,7 @@ Dotenv.config()
 const Express = require("express");
 const app = Express();
 const Path = require("path");
-const Port = process.env.PORT || 5000;
+const Port = process.env.PORT || 3000;
 
 app.use("/Assets/Images", Express.static(Path.join(__dirname, 'Assets/Images')));
 app.use("/Assets/CSS", Express.static(Path.join(__dirname, 'Assets/CSS')));
