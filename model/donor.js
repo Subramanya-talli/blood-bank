@@ -1,33 +1,41 @@
-
 const mongoose = require("mongoose");
+const { isEmail } = require("validator")
 
 const donorSchema = mongoose.Schema({
-    c:{
+    name:{
+        
         type :String,
-        required: true
+        required: [true, "Please enter an email"],
     },
-    bloodGroup:{
+    bloodgroup:{
+        
         type: String,
-        required: true
+        required: [true, "Please enter your blood group"],
+    
     },
     city:{
+        
         type: String,
-        required: true
+        required: [true, "Please enter your city"],
+
     },
-    contactNumber:{
+    contactnumber:{
         type: Number,
-        required: true
+        required: [true, "Please enter your contact number"]
+
     },
     email:{
         type: String,
-        required: true,
+        required: [true, "Please enter an email"],
         unique: true,
         lowerCase: true,
+        validate: [isEmail, "Please enter a valid email"]
     },
     password:
     {
         type: String,
-        required: true,
+        required: [true, "Please enter an password"],
+        minlength: [8, "Minimum password length is 8 charcters"]
     },},
 {
     timestamps: true
