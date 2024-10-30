@@ -1,3 +1,4 @@
+const { render } = require("ejs");
 const Donor = require("../model/donor");
 
 async function signup__post(req, res) {
@@ -30,8 +31,14 @@ function signup__get(req, res)
     }
 }
 
+function becomeDonor(req, res)
+{
+    return res.render("becomeDonor");
+}
+
 
 
 module.exports = {
-    signup__post
+    signup__post,
+    becomeDonor
 }
